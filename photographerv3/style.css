@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0px auto;
+}
+
+.headerNavbar {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerNavbar .title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.aboutMe {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    align-items: center;
+}
+
+.aboutMe img {
+    width: 25px;
+}
+
+.aboutMe a {
+    text-decoration: none;
+    color: black;
+}
+
+.aboutMe a:hover {
+    border-bottom: 1px solid black;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gridLayout {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /*ÇOK ÖNEMLİ! Bu üç sütun mevcut grid genişliğinin dışına çıkmasın gerekirse içerik küçülsün*/
+    grid-template-areas:
+        'cultur cultur mosaic'
+        'cultur cultur chair'
+        'flover flover water'
+        'gren gren blu'
+        'gren gren blu'
+        'rainbo re re';
+}
+
+#cultur {
+    grid-area: cultur;
+}
+
+#mosaic {
+    grid-area: mosaic;
+}
+
+#chair {
+    grid-area: chair;
+}
+
+#green {
+    grid-area: gren;
+}
+
+#blue {
+    grid-area: blu;
+}
+
+#rainbo {
+    grid-area: rainbo;
+}
+
+#red {
+    grid-area: re;
+}
+
+#flover {
+    grid-area: flover;
+}
+
+#water {
+    grid-area: water;
+}
+
+.project {
+    position: relative;
+}
+
+.project .overlay {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.project .overlay:hover {
+    opacity: 0.8;
+}
+
+.footer{
+    padding: 30px;
+    text-align: center;
+}
